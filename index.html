@@ -35,9 +35,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
-                font-size: 50px;
-                font-weight: bold;
+                overflow: hidden; /* This ensures the image stays within the circular bounds */
+            }
+
+            .logo img {
+                width: 100%; /* Makes image fill the container */
+                height: 100%; /* Makes image fill the container */
+                object-fit: contain; /* Preserves aspect ratio while fitting within the element */
+                /* OR use 'cover' if you want the image to fill the circle completely, potentially cropping edges */
             }
 
             h1 {
